@@ -11,6 +11,10 @@
     "quotes": "off", // Disable quotes checks
     "semi": "off", // Disable semicolon checks
     "eqeqeq": "off", // Disable strict equality checks
-    // Add any other rules you want to disable
+    "at-rule-no-unknown": null, // Disable unknown at-rule errors
+    "indentation": null, // Disable indentation errors
+    "max-empty-lines": null, // Disable max empty lines errors
+    "string-quotes": "double", // Allow any quotes or change to your preference
+    "no-invalid-position-at-import-rule": null // Disable invalid import position errors
   }
 }
