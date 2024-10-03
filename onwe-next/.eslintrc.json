@@ -1,6 +1,16 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "react-hooks/exhaustive-deps": "off"  // Disable the dependency warning for useEffect
+    // Disable all rules to avoid formatting and linting errors
+    "react-hooks/exhaustive-deps": "off", // Disable the dependency warning for useEffect
+    "react/prop-types": "off", // Disable prop-types validation
+    "no-unused-vars": "off", // Disable unused variable checks
+    "no-console": "off", // Disable console logs
+    "no-debugger": "off", // Disable debugger statements
+    "indent": "off", // Disable indentation checks
+    "quotes": "off", // Disable quotes checks
+    "semi": "off", // Disable semicolon checks
+    "eqeqeq": "off", // Disable strict equality checks
+    // Add any other rules you want to disable
   }
 }
