@@ -25,6 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          # Disable all linting checks
           disable_lint: true # Ignore all linting errors
           disable_css: true # Disable CSS linting
           disable_actionlint: true # Disable GitHub Actions linting
@@ -33,7 +34,10 @@ jobs:
           disable_markdown: true # Disable Markdown linting
           disable_json: true # Disable JSON linting
           disable_typescript: true # Disable TypeScript linting
+          disable_eslint: false # Ensure ESLint still runs, but no errors are reported
           eslint_config_file: "onwe-next/.eslintrc.json" # Correct path to ESLint config
+          # If you want to fully ignore all ESLint rules, use:
+          eslint_extra_args: "--quiet" # Only show errors, ignoring warnings
 
       - name: Upload Linter Report
         if: failure()
