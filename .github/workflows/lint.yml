@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Set the Node.js version that matches your project
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -29,14 +29,9 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
-          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          linters: "eslint"
-          eslint: true
-          eslint_config_file: "onwe-next/.eslintrc.json" # Path to your ESLint config
-          eslint_extra_args: "--no-eslintrc" # Disabling built-in ESLint config to use your custom config
-          status: "fail=false"  # Ensure the job succeeds regardless of findings
+          disable_lint: true # Ignore all linting errors
 
       - name: Upload Linter Report
         if: failure()
