@@ -34,7 +34,7 @@ jobs:
         with:
           linters: "eslint"
           eslint: true
-          eslint_config_file: "onwe-next/.eslintrc.json" # Path to your ESLint config
+          eslint_config_file: "onwefront/.eslintrc.json" # Path to your ESLint config
           eslint_extra_args: "--no-eslintrc" # Disabling built-in ESLint config to use your custom config
           status: "fail=false"  # Ensure the job succeeds regardless of findings
 
