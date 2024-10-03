@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "indent": "off",                        // Disable indentation rule
+    "max-len": "off",                       // Disable maximum line length rule
+    "no-console": "off",                    // Allow console.log statements
+    "react/prop-types": "off",              // Disable prop-types check
+    "linebreak-style": "off",               // Disable linebreak style checks
+    "no-multiple-empty-lines": "off",       // Allow multiple empty lines
+    "eol-last": "off",                      // Ignore end-of-line checks
+    "quotes": "off",                        // Disable quotes checks
+    "semi": "off",                          // Disable semicolon checks
+    "space-before-function-paren": "off",   // Ignore space before function paren
+    "object-curly-spacing": "off",          // Ignore spacing inside curly braces
+    "array-bracket-spacing": "off",         // Ignore spacing inside array brackets
+    "no-unused-vars": "off",                // Allow unused variables
+    "no-undef": "off",                      // Allow undefined variables
+    "consistent-return": "off",             // Allow inconsistent return statements
+    "camelcase": "off",                     // Allow camelCase naming
+    "no-empty": "off"                       // Allow empty blocks
+    // Add other rules to ignore or modify as necessary
+  }
+}
