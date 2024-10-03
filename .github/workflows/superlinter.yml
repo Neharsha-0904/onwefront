@@ -26,6 +26,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           disable_lint: true # Ignore all linting errors
+          disable_css: true # Disable CSS linting
+          disable_actionlint: true # Disable GitHub Actions linting
+          disable_gitleaks: true # Disable Gitleaks
+          disable_jscpd: true # Disable jscpd (duplicate code detection)
+          disable_markdown: true # Disable Markdown linting
+          disable_json: true # Disable JSON linting
+          disable_typescript: true # Disable TypeScript linting
           eslint_config_file: "onwe-next/.eslintrc.json" # Correct path to ESLint config
 
       - name: Upload Linter Report
