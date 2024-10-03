@@ -25,8 +25,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Ignore all linting errors
-          disable_lint: true
+          disable_lint: true # Ignore all linting errors
+          eslint_config_file: "onwe-next/.eslintrc.json" # Correct path to ESLint config
 
       - name: Upload Linter Report
         if: failure()
